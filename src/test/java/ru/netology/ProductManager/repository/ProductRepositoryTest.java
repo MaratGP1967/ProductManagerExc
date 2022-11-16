@@ -28,6 +28,20 @@ public class ProductRepositoryTest {
     }
 
     @Test
+    public void notSaveTest() {
+        ProductRepository mass = new ProductRepository();
+        mass.save(product1);
+        mass.save(product2);
+        mass.save(product3);
+        mass.save(product4);
+        mass.save(product5);
+
+        Assertions.assertThrows(AlreadyExistsException.class, () -> {
+            mass.save(product3);
+        });
+    }
+
+    @Test
     public void removeByIdTest() {
         ProductRepository mass = new ProductRepository();
         mass.save(product1);

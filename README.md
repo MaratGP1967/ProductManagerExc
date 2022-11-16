@@ -1,1 +1,1 @@
-# Задание 1. NotFoundException (обязательное к выполнению)
+# Задание 2*. AlreadyExistsException (необязательная задача)
